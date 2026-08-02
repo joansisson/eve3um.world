@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EvE3UM Software — Product Showcase</title>
+  <style>
+    :root {
+      --bg-color: #f7f6f3; /* Notion-like warm background */
+      --card-bg: #ffffff;
+      --text-main: #37352f;
+      --text-muted: #787774;
+      --accent-color: #2eaadc;
+      --border-color: #e9e9e7;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      padding: 0 0 32px 0; /* Padding moved to bottom to let banner stretch */
+    }
+
+    /* Top Hero Banner */
+    .banner {
+      background: #0b0b12;
+      text-align: center;
+      margin-bottom: 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .banner-link {
+      display: block;
+      line-height: 0;
+    }
+
+    .banner-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: cover;
+      transition: opacity 0.2s ease;
+    }
+
+    .banner-link:hover .banner-img {
+      opacity: 0.92;
+    }
+
+    .banner-cta {
+      padding: 20px 24px 28px;
+    }
+
+    .banner-btn {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #0b0b12;
+      font-weight: 700;
+      padding: 12px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .banner-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+    }
+
+    /* Main Container */
+    .container {
+      padding: 0 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Product Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    /* Product Card */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .thumbnail-container {
+      width: 100%;
+      height: 180px;
+      background-color: #eee;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .thumbnail-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Dark, contain-fit thumbnail (e.g. logos on dark backgrounds) */
+    .thumbnail-container.dark {
+      background-color: #141414;
+    }
+
+    .thumbnail-container.contain img {
+      object-fit: contain;
+    }
+
+    .card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .badge {
+      align-self: flex-start;
+      background-color: rgba(46, 170, 220, 0.1);
+      color: var(--accent-color);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .product-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .product-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .price {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--text-main);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.825rem;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Hero Banner -->
+  <header class="banner">
+    <a href="https://joansisson.github.io/EvE3UM/html" class="banner-link" target="_blank" rel="noopener">
+      <img src="assets/EvE3UM Banner2.png" alt="EvE3UM Software — Problem → Plan → Executed → Solution" class="banner-img">
+    </a>
+    <div class="banner-cta">
+      <a href="https://joansisson.github.io/EvE3UM/html" class="banner-btn" target="_blank" rel="noopener">Visit EvE3UM Software</a>
+    </div>
+  </header>
+
+  <main class="container" id="catalog">
+    <div class="grid">
+
+      <!-- Product 1: UDX -->
+      <div class="card">
+        <div class="thumbnail-container">
+          <img src="assets/UDXTN.png" alt="UDX">
+        </div>
+        <div class="card-body">
+          <span class="badge">Local-First</span>
+          <h2 class="product-title">UDX — Schema-Free Desktop Workspace</h2>
+          <p class="product-desc">A local-first, schema-free desktop workspace that replaces rigid databases and scattered SaaS tools with infinite nested containers, polymorphic data columns, and one-click view switching — running entirely on your device. Build flexible, schema-free data structures and create infinite nested containers for any workflow. Apply polymorphic Traits (Finance, CRM, Inventory, Fitness, etc.) and switch views instantly: Spreadsheet, Kanban, Calendar, Document. Import CSV, Excel, JSON, SQL, or full databases, with built-in AI (Gemini BYOK) for categorization, extraction, and NL-to-SQL. Generate analytics, pivot tables, charts, and reports. Reliable, fast, and private — no server, no ports, no cloud.</p>
+          <div class="card-footer">
+            <span class="price">$30 / 30-Day</span>
+            <a href="https://joansisson.github.io/EvE3UM/html" class="btn" target="_blank" rel="noopener">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2: TeamSynce -->
+      <div class="card">
+        <div class="thumbnail-container">
+          <img src="assets/tstn.png" alt="TeamSynce">
+        </div>
+        <div class="card-body">
+          <span class="badge">Offline Desktop</span>
+          <h2 class="product-title">TeamSynce — Workplace Friction & Behavioral Analyzer</h2>
+          <p class="product-desc">A secure, offline-first Electron desktop app that helps managers decode workplace friction, prevent communication breakdowns, and generate factual conflict-resolution scripts based on validated behavioral frameworks. Instead of guessing why conversations derail, TeamSynce shows the exact friction pattern and gives a step-by-step script to fix it. It translates raw personality metrics into structured friction categories (Thinking vs. Feeling traps, Autonomy vs. Stability conflicts), then generates "Stop Doing Instantly" flags, deflection risk indicators, tactical scripts, and meeting strategies. Every analysis produces a clean report with the identified trap, psychological cause, exact script to use, and conflict forecast. 100% offline — local SQLite database, encrypted Gemini key storage, no cloud syncing, no external logging. Windows .exe installer included with lifetime access to updates.</p>
+          <div class="card-footer">
+            <span class="price">Lifetime</span>
+            <a href="https://joansisson.github.io/EvE3UM/html" class="btn" target="_blank" rel="noopener">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3: GovernIQ -->
+      <div class="card">
+        <div class="thumbnail-container">
+          <img src="assets/GIQTN.png" alt="GovernIQ">
+        </div>
+        <div class="card-body">
+          <span class="badge">Local Compliance</span>
+          <h2 class="product-title">GovernIQ Local Pro — Compliance Platform</h2>
+          <p class="product-desc">A local-first compliance platform that helps teams generate policies, run risk assessments, manage frameworks, and export audit-ready documents — all powered by your own Google Gemini API key, running entirely on your device. Manage GDPR, SOC 2, NIST, EU AI Act, and more. Generate structured, compliant policies with AI, run AI-powered risk assessments, auto-remediate compliance gaps, and export policies and audit reports to PDF. Share verified documents through secure tokenized links. Includes a Document Library, Verified Link Trust Center, and Auto-Remediation Co-Pilot. No cloud backend — offline-friendly with a 30-day grace period, encrypted local SQLite + AES-256-GCM storage, and OS-level secret encryption.</p>
+          <div class="card-footer">
+            <span class="price">$30 / 30-Day</span>
+            <a href="https://joansisson.github.io/EvE3UM/html" class="btn" target="_blank" rel="noopener">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4: CreatorImageStudio -->
+      <div class="card">
+        <div class="thumbnail-container">
+          <img src="assets/CISTN.png" alt="CreatorImageStudio">
+        </div>
+        <div class="card-body">
+          <span class="badge">AI Video Editor</span>
+          <h2 class="product-title">CreatorImageStudio — AI Video Editor</h2>
+          <p class="product-desc">A local-first, AI-assisted video editor built for influencers and short-form creators. It analyzes your video, scores it, tells you what to fix, and can apply those fixes automatically — all on your device. Scores hook strength, pacing, clarity, framing, audio quality, and retention risk, then generates actionable creator-specific improvement steps. The Auto-Fix Engine cuts dead air, tightens pacing, cleans audio, reframes shots, applies LUTs, and stabilizes footage — with transcript editor, timeline preview, style packs, and export presets. Smart local models (Whisper.cpp, MediaPipe/OpenCV, DeepFilterNet/RNNoise) run entirely on-device. Tauri + React frontend, Rust core, FFmpeg engine, SQLite + Git LFS storage. No cloud upload — all processing stays private on your Windows device.</p>
+          <div class="card-footer">
+            <span class="price">$30 / 30-Day</span>
+            <a href="https://joansisson.github.io/EvE3UM/html" class="btn" target="_blank" rel="noopener">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5: BudgetBites -->
+      <div class="card">
+        <div class="thumbnail-container dark contain">
+          <img src="assets/BB.png" alt="BudgetBites Logo">
+        </div>
+        <div class="card-body">
+          <span class="badge">AI Meal Planning</span>
+          <h2 class="product-title">BudgetBites — AI Meal Planning & Wellness</h2>
+          <p class="product-desc">A local-first, AI-powered meal planning and wellness system designed to save you money, simplify your week, and help you feel your best — all without accounts, cloud storage, or online tracking. Creates weekly AI meal plans tailored to your diet, allergies, budget, pantry items, and cooking skill, generates grocery lists with estimated prices, and tracks weekly food spending. Build custom recipes with tags (Quick, Healthy, High-Protein, Budget, Meal Prep), get ingredient-based recipe ideas, and log daily wellness — mood, energy, stress, sleep, and workouts. A Mood-Food Learning Engine reveals which foods boost your well-being, plus fitness tools, stress-relief guidance, and food-photo calorie estimates. Electron + React frontend, Node local services, and SQLite storage — everything stays private on your device, with your Gemini API key encrypted using OS-level secure storage.</p>
+          <div class="card-footer">
+            <span class="price">$30 / 30-Day</span>
+            <a href="https://joansisson.github.io/EvE3UM/html" class="btn" target="_blank" rel="noopener">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6: Wheel of Fate -->
+      <div class="card">
+        <div class="thumbnail-container">
+          <img src="assets/woftn.png" alt="Wheel of Fate">
+        </div>
+        <div class="card-body">
+          <span class="badge">Family Planner</span>
+          <h2 class="product-title">Wheel of Fate — Fun Family Planner</h2>
+          <p class="product-desc">A playful, gamified weekly planner that helps families decide together, spin together, and win together. Wheel of Fate transforms ordinary weekly planning into a fun, collaborative experience — whether you're organizing chores, planning outings, or settling family debates. Includes a Home Dashboard, Family Roster & Leadership with a rotating weekly Captain, Weekly Setup, Rewards & Prizes, Parent Night Out, Family Night Out, Family Journal, and Weekly Tracker with end-of-week review. When consensus is tough, spin the wheel and let fate decide. Just download the files, open the folder, and launch index.html in your browser — no installation, no setup. Makes chores fun, reduces arguments, encourages teamwork, and helps kids feel involved and empowered.</p>
+          <div class="card-footer">
+            <span class="price">One-Time</span>
+            <a href="https://joansisson.github.io/EvE3UM/html" class="btn" target="_blank" rel="noopener">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7: BundleCraft -->
+      <div class="card">
+        <div class="thumbnail-container">
+          <img src="assets/BCTN.png" alt="BundleCraft">
+        </div>
+        <div class="card-body">
+          <span class="badge">E-Commerce Bundler</span>
+          <h2 class="product-title">BundleCraft — Product Bundling & Listing Engine</h2>
+          <p class="product-desc">A desktop-first product bundling and listing engine for Etsy sellers, digital shop owners, and e-commerce entrepreneurs. Combine multiple products into optimized bundles, generate SEO-friendly titles, descriptions, and tags with AI (OpenAI or Google Gemini BYOK), sync optional Printify inventory, analyze pricing to maximize profit margins, and export "Etsy-Ready" listings instantly. Local-first — no cloud backend, encrypted API keys, full data ownership.</p>
+          <div class="card-footer">
+            <span class="price">$30 / 30-Day</span>
+            <a href="https://joansisson.github.io/EvE3UM/html" class="btn" target="_blank" rel="noopener">View Details</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
