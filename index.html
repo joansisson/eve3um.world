@@ -186,6 +186,51 @@
     .btn:hover {
       background-color: #000;
     }
+
+    /* Site Footer */
+    .site-footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
+      margin-top: 40px;
+      padding: 32px 24px;
+    }
+
+    .site-footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+
+    .site-footer .footer-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .site-footer .footer-contact a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .site-footer .footer-contact a:hover,
+    .site-footer .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .site-footer .footer-links a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .site-footer .footer-copy {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
   </style>
 </head>
 <body>
@@ -317,6 +362,16 @@
 
     </div>
   </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-name">EvE3UM Software</div>
+      <div class="footer-contact">Contact: <a href="mailto:js.EvE3UM@programmer.net">js.EvE3UM@programmer.net</a></div>
+      <div class="footer-links"><a href="privacy.html">Privacy Policy</a></div>
+      <div class="footer-copy">&copy; 2026 EvE3UM Software. All rights reserved.</div>
+    </div>
+  </footer>
 
 </body>
 </html>
