@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — EvE3UM Software</title>
+  <title>Privacy Policy & Terms of Service — EvE3UM Software</title>
   <style>
     :root {
       --bg-color: #f7f6f3;
@@ -61,6 +61,23 @@
       border: 1px solid var(--border-color);
       border-radius: var(--radius);
       padding: 40px 40px 48px;
+    }
+
+    .section-divider {
+      border: 0;
+      height: 1px;
+      background: var(--border-color);
+      margin: 48px 0;
+    }
+
+    .tos-nav {
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+    }
+
+    .tos-nav a {
+      margin-right: 16px;
+      font-weight: 500;
     }
 
     h1 {
@@ -126,43 +143,88 @@
   </header>
 
   <main class="container">
-    <article class="paper">
-      <h1>Privacy Policy</h1>
-      <div class="effective">Effective date: August 2, 2026</div>
+    <div class="tos-nav">
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms of Service</a>
+    </div>
 
-      <p>This Privacy Policy explains how <strong>EvE3UM Software</strong> ("we", "us") handles information when you use our software, including the <strong>UDX</strong> desktop application and related products.</p>
+    <div class="paper">
+      <!-- PRIVACY POLICY SECTION -->
+      <article id="privacy">
+        <h1>Privacy Policy</h1>
+        <div class="effective">Effective date: August 8, 2026</div>
 
-      <h2>1. Local-first by design</h2>
-      <p>Our applications are local-first. Your data — your files, databases, projects, and settings — is stored on your own device in a local database. We do not see it, do not store it, and do not have access to it. You own your data, and it stays on your machine unless you choose to send it somewhere.</p>
+        <p>This Privacy Policy explains how <strong>EvE3UM Software</strong> ("we", "us") handles information when you use our software applications, tools, and desktop products (collectively, the "Software").</p>
 
-      <h2>2. Information we collect</h2>
-      <ul>
-        <li><strong>We do not require an account.</strong></li>
-        <li><strong>We do not run analytics or tracking.</strong> There is no telemetry, no advertising identifiers, and no usage tracking.</li>
-        <li><strong>Support contact:</strong> If you email us, we use your email address and the contents of your message only to respond to you.</li>
-      </ul>
+        <h2>1. Local-first by design</h2>
+        <p>Our applications are local-first. Your data — your files, databases, projects, and settings — is stored on your own device in a local database. We do not see it, do not store it, and do not have access to it. You own your data, and it stays on your machine unless you choose to send it somewhere.</p>
 
-      <h2>3. Purchases and subscriptions</h2>
-      <p>If you purchase UDX or a subscription through the Microsoft Store, Microsoft processes the payment and handles your billing information on our behalf. Their handling of your information is governed by the <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.</p>
+        <h2>2. Information we collect</h2>
+        <ul>
+          <li><strong>We do not require user accounts.</strong></li>
+          <li><strong>We do not run analytics or tracking.</strong> There is no telemetry, no advertising identifiers, and no usage tracking inside the Software.</li>
+          <li><strong>Support contact:</strong> If you email us, we use your email address and the contents of your message only to respond to you.</li>
+        </ul>
 
-      <h2>4. License verification</h2>
-      <p>To prevent unauthorized use, the application periodically verifies your license with our backend service. This check sends only your application version and a license token — no personal data, no files, and no content from your projects. If the check cannot reach our service, the app continues to work offline without interruption.</p>
+        <h2>3. Purchases and subscriptions</h2>
+        <p>If you purchase any of our Software products or subscriptions through an application store (such as the Microsoft Store), the store platform processes the payment and handles your billing information on our behalf. Their handling of your information is governed by their respective privacy declarations, such as the <a href="https://microsoft.com" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.</p>
 
-      <h2>5. Optional AI features</h2>
-      <p>Some features use AI (such as Google Gemini) to categorize, extract, or generate content. These features are <strong>opt-in</strong> and require you to supply your own API key (Bring Your Own Key). When you use an AI feature, the content you choose to process may be sent to the AI provider for processing. That data is handled under the AI provider's privacy policy, such as the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. Your API key is stored encrypted on your device and is never shared by us.</p>
+        <h2>4. License verification</h2>
+        <p>To prevent unauthorized use, the Software periodically verifies your license status with our backend service. This check sends only the application version and a license token — no personal data, no user files, and no project content. If the verification check cannot reach our service, the Software continues to function offline without interruption.</p>
 
-      <h2>6. Data security</h2>
-      <p>We design our software to keep your data secure on your device, including encrypting sensitive values such as API keys. No system is completely secure, and we cannot guarantee the absolute security of information transmitted over the internet.</p>
+        <h2>5. On-Device AI features</h2>
+        <p>Some features within our Software utilize Artificial Intelligence subsystems to categorize, extract, or generate content. These capabilities run natively on your local device via the <strong>Windows Foundry AI</strong> framework. Because processing occurs entirely on your local machine, your data, files, and project contents are never transmitted to us or any third-party cloud servers during AI operations.</p>
 
-      <h2>7. Children's privacy</h2>
-      <p>Our software is not directed to children under the age of 13, and we do not knowingly collect personal information from children.</p>
+        <h2>6. Data security</h2>
+        <p>We design our Software to keep your data secure on your device. No system is completely secure, and we cannot guarantee the absolute security of information stored locally if your physical hardware device or local operating system environment is compromised.</p>
 
-      <h2>8. Changes to this policy</h2>
-      <p>We may update this Privacy Policy from time to time. When we do, we will revise the effective date at the top of this page. Continued use of our software after changes means you accept the updated policy.</p>
+        <h2>7. Children's privacy</h2>
+        <p>Our Software is not directed to children under the age of 13, and we do not knowingly collect personal information from children.</p>
 
-      <h2>9. Contact us</h2>
-      <p>If you have questions about this Privacy Policy or your data, contact us at <a href="mailto:js.EvE3UM@programmer.net">js.EvE3UM@programmer.net</a>.</p>
-    </article>
+        <h2>8. Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we do, we will revise the effective date at the top of this page. Continued use of our Software after changes means you accept the updated policy.</p>
+
+        <h2>9. Contact us</h2>
+        <p>If you have questions about this Privacy Policy or your data, contact us at <a href="mailto:js.EvE3UM@programmer.net">js.EvE3UM@programmer.net</a>.</p>
+      </article>
+
+      <hr class="section-divider">
+
+      <!-- TERMS OF SERVICE SECTION -->
+      <article id="terms">
+        <h1>Terms of Service</h1>
+        <div class="effective">Effective date: August 8, 2026</div>
+
+        <p>Welcome to <strong>EvE3UM Software</strong>. These Terms of Service ("Terms") govern your use of our software applications, tools, and desktop products (collectively, the "Software"). By downloading, installing, or using the Software, you agree to be bound by these Terms.</p>
+
+        <h2>1. License Grant</h2>
+        <p>We grant you a limited, non-exclusive, non-transferable, and revocable license to use the Software on your personal or business devices in accordance with these Terms and any applicable platform marketplace rules (such as the Microsoft Store Standard Application License Terms).</p>
+
+        <h2>2. Data Ownership and Local Storage</h2>
+        <p>You retain full ownership and control of all files, databases, projects, and content you create or import using the Software. Because our products are local-first, you are solely responsible for managing, backing up, and protecting your data from loss or corruption.</p>
+
+        <h2>3. Local AI Framework Execution</h2>
+        <p>The Software utilizes the native <strong>Windows Foundry AI</strong> subsystem for on-device intelligent tasks. You acknowledge that AI computations run locally utilizing your device's hardware resources. Performance, system impact, and architectural constraints are governed by your local operating system configurations and hardware capabilities.</p>
+
+        <h2>4. Restrictions</h2>
+        <p>You agree not to modify, reverse engineer, decompile, or disassemble the Software, nor bypass any software security or automated licensing checks built into our license verification systems.</p>
+
+        <h2>5. Purchases, Fees, and Licensing</h2>
+        <p>Billing, payments, and subscription management for the Software are handled through third-party marketplaces (such as the Microsoft Store). All refund requests, payment processing disputes, and transaction cancellations are subject to the terms of the respective store platform.</p>
+
+        <h2>6. Disclaimer of Warranties</h2>
+        <p>The Software is provided "AS IS" and "AS AVAILABLE," without warranties of any kind, either express or implied. We do not guarantee that the Software will be error-free, uninterrupted, or perfectly compatible with all user device hardware or operating systems.</p>
+
+        <h2>7. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, EvE3UM Software shall not be liable for any direct, indirect, incidental, or consequential damages, including loss of data, loss of business profits, or system failures resulting from your use or inability to use the Software.</p>
+
+        <h2>8. Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms at any time. When updates occur, we will adjust the effective date at the top of this section. Your continued use of the Software following any changes constitutes your binding acceptance of the updated Terms.</p>
+
+        <h2>9. Contact Information</h2>
+        <p>If you have any questions or require clarification regarding these Terms, please reach out to us at <a href="mailto:js.EvE3UM@programmer.net">js.EvE3UM@programmer.net</a>.</p>
+      </article>
+    </div>
   </main>
 
   <footer class="site-footer">
