@@ -28,6 +28,58 @@
       padding-bottom: 32px;
     }
 
+    /* Top Hero Banner */
+    .banner {
+      background: #0b0b12;
+      text-align: center;
+      margin-bottom: 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .banner-link {
+      display: block;
+      line-height: 0;
+    }
+
+    .banner-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: opacity 0.2s ease;
+    }
+
+    .banner-link:hover .banner-img {
+      opacity: 0.92;
+    }
+
+    .banner-cta {
+      padding: 20px 24px 28px;
+    }
+
+    .banner-btn {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #0b0b12;
+      font-weight: 700;
+      padding: 12px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .banner-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     /* Pricing Toggle */
     .toggle-container {
       display: flex;
@@ -227,7 +279,7 @@
   </script>
 </head>
 <body>
-
+  
   <!-- Top Hero Banner -->
   <header class="banner">
     <a href="https://joansisson.github.io/EvE3UM/html" class="banner-link" target="_blank" rel="noopener">
@@ -240,12 +292,15 @@
 
   <main class="container" id="catalog">
     
+    <!-- Pricing Toggle -->
     <div class="toggle-container">
       <div id="solo" class="toggle-btn active" onclick="setPrices('solo')">Solo</div>
       <div id="business" class="toggle-btn" onclick="setPrices('business')">Business</div>
     </div>
 
+    <!-- Product Grid -->
     <div class="grid">
+      
       <!-- Product 1: UDX -->
       <div class="card">
         <div class="thumbnail-container">
