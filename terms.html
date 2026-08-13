@@ -1,0 +1,371 @@
+ke<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — EvE3UM Software</title>
+  <style>
+    /* Windows 11 Settings-style theme */
+    :root {
+      --win-bg: #f3f3f3;
+      --win-surface: #ffffff;
+      --win-text: #1a1a1a;
+      --win-subtext: #5d5d5d;
+      --win-accent: #0067c0;
+      --win-border: #e0e0e0;
+      --win-hover: #f0f0f0;
+      --win-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--win-bg);
+      color: var(--win-text);
+      min-height: 100vh;
+    }
+
+    /* Title bar-style top nav (like Windows 11 app header) */
+    .topbar {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--win-border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .topbar-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--win-text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background 0.15s ease;
+    }
+
+    .back-link:hover {
+      background: var(--win-hover);
+    }
+
+    .back-link:hover .back-link-arrow {
+      color: var(--win-accent);
+    }
+
+    .back-link-arrow {
+      font-size: 1.1rem;
+      line-height: 1;
+      color: var(--win-text);
+    }
+
+    .topbar-nav {
+      margin-left: auto;
+      display: flex;
+      gap: 4px;
+    }
+
+    .topbar-nav a {
+      color: var(--win-text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .topbar-nav a:hover {
+      background: var(--win-hover);
+    }
+
+    .topbar-nav a.active {
+      background: rgba(0, 103, 192, 0.1);
+      color: var(--win-accent);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+    }
+
+    /* Windows 11 Settings "page" layout */
+    .page-heading {
+      margin-bottom: 20px;
+    }
+
+    .page-heading h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .page-heading .effective {
+      color: var(--win-subtext);
+      font-size: 0.85rem;
+    }
+
+    .page-heading .intro {
+      margin-top: 12px;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #2f2f2f;
+    }
+
+    /* Info meta card - like a Settings detail card */
+    .meta-card {
+      background: var(--win-surface);
+      border-radius: 8px;
+      box-shadow: var(--win-shadow);
+      padding: 16px 20px;
+      margin-bottom: 20px;
+    }
+
+    .meta-card p {
+      margin-bottom: 4px;
+      color: var(--win-text);
+      font-size: 0.9rem;
+    }
+
+    .meta-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta-card strong {
+      font-weight: 600;
+    }
+
+    /* Settings-style section cards */
+    .section-card {
+      background: var(--win-surface);
+      border-radius: 8px;
+      box-shadow: var(--win-shadow);
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .section-card h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: 16px 20px 8px;
+    }
+
+    .section-card p,
+    .section-card li {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #2f2f2f;
+      padding: 0 20px;
+      margin-bottom: 12px;
+    }
+
+    .section-card ul {
+      padding: 0 20px 0 40px;
+      margin-bottom: 12px;
+    }
+
+    .section-card p:last-child {
+      padding-bottom: 16px;
+      margin-bottom: 0;
+    }
+
+    .section-card ul:last-child {
+      padding-bottom: 16px;
+      margin-bottom: 0;
+    }
+
+    /* Bottom link section */
+    .bottom-link {
+      margin-top: 24px;
+      padding: 16px 20px;
+      background: var(--win-surface);
+      border-radius: 8px;
+      box-shadow: var(--win-shadow);
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--win-accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer like Windows 11 about card */
+    .site-footer {
+      border-top: 1px solid var(--win-border);
+      background: var(--win-surface);
+      padding: 16px 24px;
+    }
+
+    .site-footer .container {
+      padding: 0;
+    }
+
+    .site-footer .footer-copy {
+      font-size: 0.8rem;
+      color: var(--win-subtext);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="back-link">
+        <span class="back-link-arrow">&#8592;</span>
+        <span>EvE3UM Software</span>
+      </a>
+      <nav class="topbar-nav">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html" class="active">Terms of Service</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-heading">
+      <h1>Terms of Service</h1>
+      <div class="effective">Effective date: August 12, 2026</div>
+      <p class="intro">These Terms of Service ("Terms") govern your use of the Founder AI desktop application and any related software provided by EvE3UM Software ("we", "us", "our"). By downloading, installing, accessing, or using the Software, you agree to be bound by these Terms. If you do not agree to these Terms, do not download, install, or use the Software.</p>
+    </div>
+
+    <div class="meta-card">
+      <p><strong>Application:</strong> Founder AI (Windows desktop application)</p>
+      <p><strong>Developer:</strong> EvE3UM Software</p>
+      <p><strong>Website:</strong> <a href="https://eve3um.world" target="_blank" rel="noopener">https://eve3um.world</a></p>
+      <p><strong>Contact:</strong> <a href="mailto:js.EvE3UM@programmer.net">js.EvE3UM@programmer.net</a></p>
+    </div>
+
+    <div class="section-card">
+      <h2>1. Eligibility and Acceptance</h2>
+      <p>By using the Software, you represent that you are at least 13 years of age, or the age of legal majority in your jurisdiction if higher. If you are using the Software on behalf of a company or organization, you represent that you have the authority to bind that entity to these Terms.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>2. License Grant</h2>
+      <p>We grant you a limited, non-exclusive, non-transferable, revocable license to install and use the Software on devices that you own or control, solely for your personal or internal business purposes, in accordance with these Terms and any applicable marketplace terms, including the <a href="https://www.microsoft.com/en-us/store/default.aspx" target="_blank" rel="noopener">Microsoft Store Standard Application License Terms</a>.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>3. Local-First Operation and Data Ownership</h2>
+      <p>The Software is local-first. All files, projects, databases, workspace settings, and execution logs are stored locally on your device. You retain full ownership of, and sole responsibility for, all content you create, import, or process using the Software. You are responsible for managing, maintaining, and backing up your local data. We do not access, collect, store, or transmit your local data.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>4. On-Device AI and Model Execution</h2>
+      <p>Any artificial intelligence or model execution within the Software runs entirely on your local hardware. For example, your prompts, inputs, and outputs are processed locally on your device and are not transmitted to us or any third-party cloud model. You acknowledge that AI processing uses your device's processor, memory, and storage resources, and that performance may vary depending on your hardware and operating system configuration.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>5. Internet Connectivity</h2>
+      <p>The Software operates offline by default and does not require an internet connection for its core features. If you choose to enable optional online services or features made available within the Software, such optional services may be subject to additional terms provided at the time you enable them.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>6. Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Software for any unlawful purpose or in any manner that violates applicable local, state, national, or international law;</li>
+        <li>Modify, reverse engineer, decompile, or disassemble the Software, except to the extent expressly permitted by applicable law;</li>
+        <li>Copy, distribute, resell, rent, lease, or sublicense the Software to any third party;</li>
+        <li>Bypass, disable, or interfere with any security feature, license verification mechanism, or digital rights management component of the Software;</li>
+        <li>Use the Software to create content that is illegal, infringing, defamatory, obscene, or that violates the rights of any third party.</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>7. Intellectual Property</h2>
+      <p>The Software, including all code, design, graphics, trademarks, and documentation, is owned by EvE3UM Software or its licensors and is protected by intellectual property laws. Except for the license granted in Section 2, we do not grant you any rights, title, or interest in the Software. Content you create using the Software remains your property.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>8. Purchases, Payments, and Subscriptions</h2>
+      <p>Billing and payment processing for the Software are handled through third-party marketplaces, such as the Microsoft Store. Refunds, cancellations, and payment disputes are governed by the applicable marketplace terms and policies, including the Microsoft Store refund policy. We are not responsible for payment processing or billing disputes with the marketplace provider.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>9. Updates and Support</h2>
+      <p>We may, at our discretion, provide updates, patches, or new versions of the Software. We are not obligated to provide support, maintenance, updates, or upgrades for the Software. The availability of future updates may depend on marketplace or platform policies. We may discontinue any feature or the Software itself at any time without liability.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>10. Disclaimer of Warranties</h2>
+      <p>THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS, OR THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS. YOU ASSUME ALL RISK ASSOCIATED WITH THE USE OF THE SOFTWARE, INCLUDING THE RISK OF DATA LOSS OR DAMAGE TO YOUR DEVICE. YOUR USE OF THE SOFTWARE IS AT YOUR OWN RISK.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>11. Limitation of Liability</h2>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL EVE3UM SOFTWARE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR DATA USE, ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE SOFTWARE, WHETHER BASED ON CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THESE TERMS OR THE SOFTWARE SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE SOFTWARE, OR TEN UNITED STATES DOLLARS ($10.00) IF YOU PAID NOTHING, WHICHEVER IS GREATER. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, SO SOME OF THE ABOVE EXCLUSIONS OR LIMITATIONS MAY NOT APPLY TO YOU.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>12. Third-Party Components</h2>
+      <p>The Software may include third-party open-source libraries or components. Use of those components is subject to their respective license terms, which are provided within the Software or its documentation. To the extent there is a conflict between these Terms and a third-party component license, the third-party component license governs solely with respect to that component.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>13. Termination</h2>
+      <p>We may terminate or suspend your license to use the Software at any time, with or without cause, effective immediately upon notice. You may terminate these Terms at any time by ceasing all use of the Software and deleting all copies from your devices. Upon termination, the license granted in Section 2 terminates, and you must delete all copies of the Software. Sections 3, 7, 10, 11, and 14 through 17 survive any termination of these Terms.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>14. Governing Law</h2>
+      <p>These Terms are governed by the laws of the State of Texas, without regard to its conflict-of-laws principles. If you are located outside the United States, your use of the Software may also be subject to the laws of your jurisdiction. Any legal action arising out of or relating to these Terms shall be brought exclusively in the state or federal courts located in Travis County, Texas, and you consent to the personal jurisdiction of those courts.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>15. Changes to These Terms</h2>
+      <p>We may update these Terms from time to time. When we do, we will revise the effective date at the top of this page and notify you through the Software or the website where reasonably practicable. Your continued use of the Software after the updated Terms are published constitutes your acceptance of the revised Terms. If you do not agree to the updated Terms, you may stop using the Software.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>16. Severability and Waiver</h2>
+      <p>If any provision of these Terms is held to be invalid or unenforceable, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect. Our failure to enforce any provision of these Terms does not constitute a waiver of that provision or any other provision.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>17. Entire Agreement</h2>
+      <p>These Terms, together with our <a href="privacy.html">Privacy Policy</a> and any additional terms you agree to when purchasing or enabling optional features, constitute the entire agreement between you and EvE3UM Software regarding the Software and supersede all prior agreements and understandings, whether written or oral.</p>
+    </div>
+
+    <div class="section-card">
+      <h2>18. Contact Information</h2>
+      <p>If you have questions about these Terms, please contact us at:</p>
+      <ul>
+        <li>Email: <a href="mailto:js.EvE3UM@programmer.net">js.EvE3UM@programmer.net</a></li>
+        <li>Website: <a href="https://eve3um.world" target="_blank" rel="noopener">https://eve3um.world</a></li>
+      </ul>
+    </div>
+
+    <div class="bottom-link">
+      <a href="privacy.html">Read our Privacy Policy &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-copy">&copy; 2026 EvE3UM Software. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
