@@ -28,27 +28,29 @@
       padding-bottom: 32px;
     }
 
-    /* Restored Compact Hero Banner */
+    /* Full-width Hero Banner */
     .banner {
       background: #0b0b12;
       text-align: center;
       margin-bottom: 24px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 16px 20px;
+      padding: 20px 20px 16px;
     }
 
     .banner-link {
-      display: inline-block;
-      max-width: 600px;
+      display: block;
       width: 100%;
+      max-width: none;
       text-decoration: none;
     }
 
     .banner-img {
       display: block;
       width: 100%;
-      max-height: 120px;
+      height: auto;
+      max-height: 220px;
       object-fit: contain;
+      margin: 0 auto;
       transition: opacity 0.2s ease;
     }
 
@@ -110,7 +112,7 @@
     /* Product Grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
 
@@ -240,8 +242,31 @@
       text-decoration: underline;
     }
 
-    .site-footer .footer-links a {
+    .footer-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-btn {
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: var(--text-main);
+      text-decoration: none;
       font-size: 0.85rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    }
+
+    .footer-btn:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+      background: rgba(46, 170, 220, 0.05);
+      text-decoration: none;
     }
 
     .site-footer .footer-copy {
@@ -251,9 +276,8 @@
   </style>
 
   <script>
-    const soloPrices = {
+    const personalPrices = {
       udx: "$19 / Month",
-      teamsynce: "$29 / Month",
       governiq: "$29 / Month",
       creator: "$19 / Month",
       budget: "$9 / Month",
@@ -262,7 +286,6 @@
 
     const businessPrices = {
       udx: "$39 / Month",
-      teamsynce: "$59 / Month",
       governiq: "$59 / Month",
       creator: "$19 / Month",
       budget: "$9 / Month",
@@ -270,12 +293,11 @@
     };
 
     function setPrices(mode) {
-      document.querySelector("[data-price='udx']").textContent = mode === "solo" ? soloPrices.udx : businessPrices.udx;
-      document.querySelector("[data-price='teamsynce']").textContent = mode === "solo" ? soloPrices.teamsynce : businessPrices.teamsynce;
-      document.querySelector("[data-price='governiq']").textContent = mode === "solo" ? soloPrices.governiq : businessPrices.governiq;
-      document.querySelector("[data-price='creator']").textContent = soloPrices.creator;
-      document.querySelector("[data-price='budget']").textContent = soloPrices.budget;
-      document.querySelector("[data-price='wheel']").textContent = soloPrices.wheel;
+      document.querySelector("[data-price='udx']").textContent = mode === "personal" ? personalPrices.udx : businessPrices.udx;
+      document.querySelector("[data-price='governiq']").textContent = mode === "personal" ? personalPrices.governiq : businessPrices.governiq;
+      document.querySelector("[data-price='creator']").textContent = mode === "personal" ? personalPrices.creator : businessPrices.creator;
+      document.querySelector("[data-price='budget']").textContent = mode === "personal" ? personalPrices.budget : businessPrices.budget;
+      document.querySelector("[data-price='wheel']").textContent = personalPrices.wheel;
 
       document.querySelectorAll(".toggle-btn").forEach(btn => btn.classList.remove("active"));
       document.getElementById(mode).classList.add("active");
@@ -298,7 +320,7 @@
     
     <!-- Pricing Toggle -->
     <div class="toggle-container">
-      <div id="solo" class="toggle-btn active" onclick="setPrices('solo')">Solo</div>
+      <div id="personal" class="toggle-btn active" onclick="setPrices('personal')">Personal</div>
       <div id="business" class="toggle-btn" onclick="setPrices('business')">Business</div>
     </div>
 
@@ -321,23 +343,7 @@
         </div>
       </div>
 
-      <!-- Product 2: TeamSynce -->
-      <div class="card">
-        <div class="thumbnail-container">
-          <img src="assets/tstn.png" alt="TeamSynce">
-        </div>
-        <div class="card-body">
-          <span class="badge">Offline Desktop</span>
-          <h2 class="product-title">TeamSynce — Workplace Friction & Behavioral Analyzer</h2>
-          <p class="product-desc">A secure, offline-first Electron desktop app that helps managers decode workplace friction, prevent communication breakdowns, and generate factual conflict-resolution scripts based on validated behavioral frameworks. Instead of guessing why conversations derail, TeamSynce shows the exact friction pattern and gives a step-by-step script to fix it. It translates raw personality metrics into structured friction categories (Thinking vs. Feeling traps, Autonomy vs. Stability conflicts), then generates "Stop Doing Instantly" flags, deflection risk indicators, tactical scripts, and meeting strategies. Every analysis produces a clean report with the identified trap, psychological cause, exact script to use, and conflict forecast. 100% offline — local SQLite database, encrypted Gemini key storage, no cloud syncing, no external logging. Windows .exe installer included with lifetime access to updates.</p>
-          <div class="card-footer">
-            <span class="price" data-price="teamsynce">$29 / Month</span>
-            <a href="https://joansisson.github.io/EvE3UM/html" class="btn" target="_blank" rel="noopener">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 3: GovernIQ -->
+      <!-- Product 2: GovernIQ -->
       <div class="card">
         <div class="thumbnail-container">
           <img src="assets/GIQTN.png" alt="GovernIQ">
@@ -353,7 +359,7 @@
         </div>
       </div>
 
-      <!-- Product 4: CreatorImageStudio -->
+      <!-- Product 3: CreatorImageStudio -->
       <div class="card">
         <div class="thumbnail-container">
           <img src="assets/CISTN.png" alt="CreatorImageStudio">
@@ -369,7 +375,7 @@
         </div>
       </div>
 
-      <!-- Product 5: BudgetBites -->
+      <!-- Product 4: BudgetBites -->
       <div class="card">
         <div class="thumbnail-container dark contain">
           <img src="assets/BB.png" alt="BudgetBites Logo">
@@ -385,7 +391,7 @@
         </div>
       </div>
 
-      <!-- Product 6: Wheel of Fate -->
+      <!-- Product 5: Wheel of Fate -->
       <div class="card">
         <div class="thumbnail-container">
           <img src="assets/woftn.png" alt="Wheel of Fate">
@@ -409,7 +415,10 @@
     <div class="container">
       <div class="footer-name">EvE3UM Software</div>
       <div class="footer-contact">Contact: <a href="mailto:js.EvE3UM@programmer.net">js.EvE3UM@programmer.net</a></div>
-      <div class="footer-links"><a href="privacy.html">Privacy Policy</a></div>
+      <div class="footer-buttons">
+        <a href="privacy.html" class="footer-btn">Privacy Policy</a>
+        <a href="terms.html" class="footer-btn">Terms of Service</a>
+      </div>
       <div class="footer-copy">&copy; 2026 EvE3UM Software. All rights reserved.</div>
     </div>
   </footer>
